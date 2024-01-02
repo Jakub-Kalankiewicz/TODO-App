@@ -1,6 +1,6 @@
 import prisma from "@/app/libs/prismadb";
 
-import { getSession } from "@/app/api/auth/[...nextauth]/route";
+import { getSession } from "@/app/libs/authOptions";
 
 const getCurrentUser = async () => {
   try {
