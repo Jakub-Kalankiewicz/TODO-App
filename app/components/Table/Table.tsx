@@ -39,7 +39,7 @@ const Table = ({
   setRefetchData,
 }: TableProps) => {
   return (
-    <div className="relative overflow-x-auto shadow-md sm:rounded-lg w-full pb-5">
+    <div className="relative overflow-x-auto md:overflow-visible shadow-md sm:rounded-lg w-full pb-5">
       <table className="w-full text-md text-left rtl:text-right text-gray-400 ">
         <TableHeader handleHeaderClick={handleHeaderClick} />
         <tbody>
