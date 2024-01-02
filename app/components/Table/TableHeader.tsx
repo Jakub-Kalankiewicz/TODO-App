@@ -9,7 +9,7 @@ const tableHeader = ["Title", "Description", "Status", "Completed"];
 const TableHeader = ({ handleHeaderClick }: TableHeaderProps) => {
   return (
     <thead
-      className="text-xs text-gold-200 uppercase"
+      className="text-xs text-gold-200 uppercase tracking-wider"
       style={{
         background: "linear-gradient(to top, #0a0f0d, #1a2a2d)",
       }}

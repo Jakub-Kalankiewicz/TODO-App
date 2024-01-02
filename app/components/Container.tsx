@@ -8,7 +8,7 @@ interface ContainerProps {
 
 const Container = ({ children, title, fullWidth }: ContainerProps) => {
   return (
-    <section className="mx-auto px-6 lg:px-8 mb-32 py-24 sm:py-32">
+    <section className="mx-auto px-6 max-w-7xl lg:px-8 mb-32 py-24 sm:py-32">
       <h2 className="text-4xl font-bold tracking-wide text-lime-500 sm:text-6xl font-lora ">
         {title}
       </h2>
