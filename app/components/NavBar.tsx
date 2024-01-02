@@ -19,7 +19,7 @@ const NavBar = () => {
         <Link href="/home">
           <h1 className="text-gray-900 text-md md:text-3xl font-bold text-center tracking-wide uppercas lg:ml-2 flex justify-center items-center gap-2">
             <FaRegUser size="2rem" className="md:block hidden" />
-            {userName}
+            {userName || "Loading..."}
           </h1>
         </Link>
         <Link href="/home/add" className="flex justify-center items-center">
