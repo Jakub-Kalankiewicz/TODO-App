@@ -18,7 +18,7 @@ const DescriptionPopover = ({ description }: DescriptionPopoverProps) => {
       {({ open }) => (
         <>
           <Popover.Button>
-            <span>{formattedDescription}</span>
+            <span className="cursor-pointer">{formattedDescription}</span>
           </Popover.Button>
           <Transition
             as={Fragment}

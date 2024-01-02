@@ -24,7 +24,6 @@ export async function PUT(
   context: { params: { todoId: string } }
 ) {
   try {
-    console.log(context);
     const currenUser = await getCurrentUser();
     if (!currenUser?.id || !currenUser?.email) {
       return new NextResponse("Unauthorized", { status: 401 });

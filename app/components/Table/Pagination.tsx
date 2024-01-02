@@ -34,7 +34,7 @@ const Pagination = ({ page, totalPages }: PaginationProps) => {
             <button
               className={`flex items-center justify-center px-3 h-8 leading-tight text-gray-400 bg-gray-800 border border-gray-700 hover:bg-gray-700 hover:text-white ${
                 page === p
-                  ? "bg-green-600 text-gray-900 hover:bg-green-600 hover:text-gray-900"
+                  ? "bg-green-600 text-gray-900 hover:bg-green-600 hover:text-inherit cursor-auto"
                   : ""
               }`}
               onClick={() => handlePageChange(p)}

@@ -19,7 +19,6 @@ const AuthForm = () => {
 
   const socialAction = (action: string) => {
     signIn(action, { redirect: false }).then((callback) => {
-      console.log(callback);
       if (callback?.error) {
         toast.error("Invalid credentials!");
       }

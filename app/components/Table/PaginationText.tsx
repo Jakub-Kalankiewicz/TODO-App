@@ -15,7 +15,7 @@ const PaginationText = ({
     <span className="text-md font-normal text-gray-600  mb-4 md:mb-0 block w-full md:inline md:w-auto">
       Showing{" "}
       <span className="font-semibold text-lime-500">{`${
-        (page - 1) * pageSize + 1
+        elementsNumber !== 0 ? (page - 1) * pageSize + 1 : 0
       }-${(page - 1) * pageSize + length}`}</span>{" "}
       of <span className="font-semibold text-lime-500 ">{elementsNumber}</span>
     </span>

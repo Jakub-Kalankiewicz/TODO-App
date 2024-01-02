@@ -20,7 +20,7 @@ type Todo = {
 };
 
 interface TableProps {
-  data: Todo[];
+  data: Todo[] | null;
   totalPages: number;
   elementsNumber: number;
   page: number;
@@ -43,18 +43,26 @@ const Table = ({
       <table className="w-full text-md text-left rtl:text-right text-gray-400 ">
         <TableHeader handleHeaderClick={handleHeaderClick} />
         <tbody>
-          {data && data.length > 0 ? (
-            data.map((todo) => (
-              <TableRow
-                key={todo.id}
-                {...todo}
-                setRefetchData={setRefetchData}
-              />
-            ))
+          {data ? (
+            data.length > 0 ? (
+              data.map((todo) => (
+                <TableRow
+                  key={todo.id}
+                  {...todo}
+                  setRefetchData={setRefetchData}
+                />
+              ))
+            ) : (
+              <tr>
+                <td colSpan={5} className="w-full p-3 text-lg">
+                  No transactions
+                </td>
+              </tr>
+            )
           ) : (
             <tr>
-              <td colSpan={3} className="w-full p-3 text-lg">
-                No transactions
+              <td colSpan={5} className="w-full p-3 text-lg">
+                Loading...
               </td>
             </tr>
           )}
@@ -68,7 +76,7 @@ const Table = ({
           page={page}
           pageSize={pageSize}
           elementsNumber={elementsNumber}
-          length={data.length}
+          length={data ? data.length : 0}
         />
         <Pagination page={page} totalPages={totalPages} />
       </nav>

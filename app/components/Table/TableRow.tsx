@@ -32,7 +32,7 @@ const TableRow = ({
       >
         <div className="flex justify-center items-center">{formattedTitle}</div>
       </th>
-      <td className="px-6 py-4 text-lime-500 cursor-pointer z-0">
+      <td className="px-6 py-4 text-lime-500 z-0">
         <div className="flex justify-center items-center">
           <DescriptionPopover description={description} />
         </div>

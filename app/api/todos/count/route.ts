@@ -15,6 +15,10 @@ export async function GET() {
       },
     });
 
+    if(count === 0 ) {
+      return new NextResponse("No todos", { status: 404 });
+    }
+
     if (!count || isNaN(count)) {
       return new NextResponse("Invalid count", { status: 500 });
     }

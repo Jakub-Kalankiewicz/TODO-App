@@ -11,7 +11,7 @@ const TodoTable = () => {
   const currentPage = parseInt(searchParams.get("page") || "1", 10);
   const [totalPages, setTotalPages] = useState<number>(0);
   const [totalTodos, setTotalTodos] = useState<number>(0);
-  const [todoData, setTodoData] = useState([]);
+  const [todoData, setTodoData] = useState(null);
   const [refetchData, setRefetchData] = useState(false);
   const [sort, setSort] = useState({ keyToSort: "", order: "" });
 
