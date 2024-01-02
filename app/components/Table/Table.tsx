@@ -39,7 +39,7 @@ const Table = ({
   setRefetchData,
 }: TableProps) => {
   return (
-    <div className="relative shadow-md sm:rounded-lg w-full pb-5">
+    <div className="relative overflow-x-auto shadow-md sm:rounded-lg w-full pb-5">
       <table className="w-full text-md text-left rtl:text-right text-gray-400 ">
         <TableHeader handleHeaderClick={handleHeaderClick} />
         <tbody>
@@ -61,7 +61,7 @@ const Table = ({
         </tbody>
       </table>
       <nav
-        className="flex items-center flex-column flex-wrap md:flex-row justify-between pt-4 px-4 w-full "
+        className="flex items-center flex-column flex-wrap md:flex-row justify-center md:justify-between pt-4 px-4 w-full "
         aria-label="Table navigation"
       >
         <PaginationText
